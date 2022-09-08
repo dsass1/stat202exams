@@ -157,6 +157,7 @@ question_module_server_impl <- function(
   is_done <- reactive(label = "is_done", {
     if (is.null(is_correct_info())) return(NULL)
     FALSE
+    #DOES NOT APPEAR TO CHANGE ANYTHING
     #(!isTRUE(question$allow_retry)) || is_correct_info()$correct
   })
   
@@ -172,7 +173,8 @@ question_module_server_impl <- function(
       
       # update the submit button label
       if (is_correct_info()$correct) {
-        "correct"
+        "try_again"
+        #"correct"
       } else {
         # not correct
         if (isTRUE(question$allow_retry)) {
@@ -180,7 +182,8 @@ question_module_server_impl <- function(
           "try_again"
         } else {
           # not correct and can not try again
-          "incorrect"
+          #"incorrect"
+          "try_again"
         }
       }
     }
