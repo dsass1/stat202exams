@@ -4,7 +4,7 @@
 \alias{knit_print.tutorial_question}
 \title{Knitr question print methods}
 \usage{
-\method{knit_print}{exam}(x, ...)
+\method{knit_print}{tutorial_question}(x, ...)
 }
 \arguments{
 \item{x}{An R object to be printed}

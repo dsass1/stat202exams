@@ -48,7 +48,9 @@
 #' @inheritParams knitr::knit_print
 #' @export
 #' @importFrom knitr knit_print
-#' @method knit_print exam
+#' @import shiny
+#' @import learnr
+#' @method knit_print tutorial_question
 #' @rdname knit_print
 #'
 knit_print.tutorial_question <- function(x, ...) {
