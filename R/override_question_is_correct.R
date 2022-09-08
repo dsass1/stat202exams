@@ -5,6 +5,13 @@
 #' 
 #' 
 # Override to mark every question as wrong
+
+#' @export
+question_is_correct <- function(question, value, ...) {
+  learnr::mark_as(FALSE)
+  #UseMethod("question_is_correct", question)
+}
+
 #' @export
 question_is_correct.default <- function(question, value, ...) {
   learnr::mark_as(FALSE)
