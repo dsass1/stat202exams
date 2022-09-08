@@ -333,10 +333,10 @@ question_module_server_impl <- function(
 question_button_label <- function(question, label_type = "submit", is_valid = TRUE) {
   label_type <- match.arg(label_type, c("submit", "try_again", "correct", "incorrect"))
   
-  if (label_type %in% c("correct", "incorrect")) {
+ # if (label_type %in% c("correct", "incorrect")) {
     # No button when answer is correct or incorrect (wrong without try again)
-    return(NULL)
-  }
+#    return(NULL)
+  #}
   
   button_label <- question$button_labels[[label_type]]
   is_valid <- isTRUE(is_valid)
@@ -355,7 +355,7 @@ question_button_label <- function(question, label_type = "submit", is_valid = TR
       button <- disable_all_tags(button)
     }
     button
-  } else if (label_type == "try_again") {
+  } else if (label_type %in% c("correct", "incorrect", "try_again")) {
     mutate_tags(
       actionButton(
         action_button_id, button_label,
