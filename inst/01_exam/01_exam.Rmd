@@ -19,7 +19,7 @@ library(learnr)
 library(tidyverse)
 library(ISDStutorials)
 library(gradethis)
-library(stat202_exams)
+library(stat202exams)
 
 knitr::opts_chunk$set(echo = FALSE)
 gradethis_setup()
