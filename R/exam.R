@@ -258,15 +258,16 @@ question_module_server_impl <- function(
       return(NULL)
     }
     
-    if (is_done()) {
-      # if the question is 'done', display the final input ui and disable everything
-      
-      return(
-        learnr:::withLearnrMathJax(
-          question_ui_completed(question, submitted_answer())
-        )
-      )
-    }
+    
+    # if (is_done()) {
+    #   # if the question is 'done', display the final input ui and disable everything
+    #   
+    #   return(
+    #     learnr:::withLearnrMathJax(
+    #       question_ui_completed(question, submitted_answer())
+    #     )
+    #   )
+    # }
     
     # if the question is NOT 'done', disable the current UI
     #   until it is reset with the try again button
