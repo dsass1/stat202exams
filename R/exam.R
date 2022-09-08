@@ -82,7 +82,7 @@ question_module_ui_exam <- function(id) {
       uiOutput(ns("answer_container")),
       #uiOutput(ns("message_container")),
       uiOutput(ns("action_button_container")),
-      withLearnrMathJax()
+      learnr:::withLearnrMathJax()
     )
   )
 }
