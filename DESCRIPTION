@@ -1,5 +1,5 @@
 Type: Package
-Package: stat202-exams
+Package: stat202exams
 Title: Exams for Introduction to Statistics and Data Science
 Version: 0.0.0.9000
 Authors@R: 
