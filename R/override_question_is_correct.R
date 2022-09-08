@@ -6,6 +6,11 @@
 #' 
 # Override to mark every question as wrong
 #' @export
+question_is_correct.default <- function(question, value, ...) {
+  learnr::mark_as(FALSE)
+}
+
+#' @export
 question_is_correct.blank <- function(question, value, ...) {
   learnr::mark_as(FALSE)
 }
