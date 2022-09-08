@@ -156,7 +156,8 @@ question_module_server_impl <- function(
   # should present all messages?
   is_done <- reactive(label = "is_done", {
     if (is.null(is_correct_info())) return(NULL)
-    (!isTRUE(question$allow_retry)) || is_correct_info()$correct
+    FALSE
+    #(!isTRUE(question$allow_retry)) || is_correct_info()$correct
   })
   
   
