@@ -71,7 +71,16 @@ exam_module_server <- function(
     question
 ) {
 
-  output$answer_container <- renderUI({ div(class="loading", question$loading) })
+  output$answer_container <- renderUI({
+    if (is.null(question$loading)) {
+      learnr:::question_ui_loading(question)
+    } else {
+      div(
+        class="loading",
+        question$loading
+      )
+    }
+  })
 
   # Setup reactive here that will be updated by the question modules
   question_state <- reactiveVal()
@@ -136,8 +145,8 @@ exam_module_server_impl <- function(
       # update the submit button label
       # always try again
       if (is_correct_info()$correct) {
-        #"correct"
-        "try_again"
+        "correct"
+        #"try_again"
       } else {
         # not correct
         if (isTRUE(question$allow_retry)) {
@@ -145,8 +154,8 @@ exam_module_server_impl <- function(
           "try_again"
         } else {
           # not correct and can not try again
-          #"incorrect"
-          "try_again"
+          "incorrect"
+          #"try_again"
         }
       }
     }
@@ -183,7 +192,6 @@ exam_module_server_impl <- function(
   output$action_button_container <- renderUI({
     learnr:::question_button_label(
       question,
-      #"try_again",
       button_type(),
       answer_is_valid()
     )
