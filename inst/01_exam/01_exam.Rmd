@@ -1,0 +1,109 @@
+---
+title: "Exam 1"
+tutorial:
+  id: "isds_exam1"
+  version: 0.1
+  
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    css: ["css/nu-theme.css"]
+runtime: shiny_prerendered
+description: >
+  This proficiency exam covers Preface - Chapter 4.
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(ISDStutorials)
+library(gradethis)
+
+knitr::opts_chunk$set(echo = FALSE)
+gradethis_setup()
+options(tutorial.event_recorder = ISDStutorials::isds_recorder)
+```
+
+
+```{r, context = "server"}
+rubric_list <- data.frame(question = c("Ex1", "Ex1Q1", "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9"),
+                          points_possible = rep(1, 11))
+
+grade_server("grade_out", 
+            rubric_list = rubric_list)
+```
+
+
+```{r isds-header}
+# student name
+question_blank("Name: ___",
+                            answer_fn(function(value){
+                              if (length(value) >= 1 ) {
+                                return(mark_as(TRUE))
+                                }
+                              return(mark_as(FALSE) )
+                              }),
+          style = "notes_question",
+          correct = paste0(fontawesome::fa("check") ),
+          incorrect = paste0(fontawesome::fa("xmark") ),
+          allow_retry = FALSE )
+# have name, grade button, and print button on same line
+bootstrapPage(
+#     div(style="display:inline-block",
+#         grade_button_ui("grade_out") ),
+     div(style="display:inline-block", print_ui("Print") )
+)
+
+# can have the grade output appear anywhere in your tutorial
+#grade_output_ui("grade_out")
+```
+
+
+
+## Instructions
+
+You have 50 minutes to complete this exam. The exam covers the material learned from Preface - Chapter 4 and is open note, open book.
+
+Once you are finished:
+
+-   Make sure every question/exercise has been submitted.
+-   Click the 'pdf' button to save the document as a pdf, you must have the exam open in a browser window for this button to work.
+-   Submit the completed pdf to Canvas.
+
+
+
+## Concept
+
+```{r Q}
+#reading check 2
+quiz(
+  caption = NULL,
+  #Q1
+  question("Q1) What is the name of the theoretical framework for data visualization that is the foundation of the ggplot2 package?",
+    type = "learnr_text",
+    answer("the grammar of graphics", correct = TRUE),
+    answer("grammar of graphics", correct = TRUE),
+    answer("layered grammar of graphics", correct = TRUE),
+    answer("the layered grammar of graphics", correct = TRUE),
+    allow_retry = TRUE,
+    incorrect = "Submitted"
+  ),
+  question_wordbank(paste("Q3) Drag and drop the variables to match the aesthetics they are mapped onto in Figure 2.1", htmltools::img(src="images/Figure_02_1.png", height = 400, width = 700) ),
+          choices = c("x","size",  "color", "y"),
+          wordbank = c("GDP per Capita", "Population", "Continent", "Life Expectancy"),
+          answer(c("GDP per Capita", "Population", "Continent","Life Expectancy"), correct = TRUE), 
+        allow_retry = TRUE,
+        incorrect = "Submitted")
+)
+
+```
+
+## Application
+
+Construct a scatterplot of `eruptions` by `waiting` using the `faithful` dataset by filling in the blanks (the data is already preloaded in R).
+
+```{r Ex1, exercise=TRUE}
+ggplot(data = faithful, mapping = aes(x = ___, y = ___)) +
+  ____
+```
