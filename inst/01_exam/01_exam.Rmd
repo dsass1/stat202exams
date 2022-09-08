@@ -81,21 +81,21 @@ Once you are finished:
 quiz(
   caption = NULL,
   #Q1
-  question("Q1) What is the name of the theoretical framework for data visualization that is the foundation of the ggplot2 package?",
-    type = "learnr_text",
-    answer("the grammar of graphics", correct = TRUE),
-    answer("grammar of graphics", correct = TRUE),
-    answer("layered grammar of graphics", correct = TRUE),
-    answer("the layered grammar of graphics", correct = TRUE),
-    allow_retry = TRUE,
-    incorrect = "Submitted"
-  ),
+  question_radio(
+  "Pick the letter B",
+  answer("A"),
+  answer("B", correct = TRUE),
+  answer("C"),
+  answer("D"),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+),
   question_wordbank(paste("Q3) Drag and drop the variables to match the aesthetics they are mapped onto in Figure 2.1", htmltools::img(src="images/Figure_02_1.png", height = 400, width = 700) ),
           choices = c("x","size",  "color", "y"),
           wordbank = c("GDP per Capita", "Population", "Continent", "Life Expectancy"),
           answer(c("GDP per Capita", "Population", "Continent","Life Expectancy"), correct = TRUE), 
         allow_retry = TRUE,
-        incorrect = "Submitted")
+        incorrect = "submitted")
 )
 
 ```

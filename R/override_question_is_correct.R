@@ -42,3 +42,8 @@ question_is_correct.learnr_numeric <- function(question, value, ...) {
 question_is_correct.learnr_radio <- function(question, value, ...) {
   learnr::mark_as(FALSE)
 }
+
+#' @export
+question_is_correct <- function(question, value, ...) {
+  learnr::mark_as(FALSE)
+}
