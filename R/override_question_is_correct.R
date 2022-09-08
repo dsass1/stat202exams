@@ -1,8 +1,5 @@
 #override tutorial completion
-#' @importFrom learnr question_ui_initialize
-#' @importFrom learnr question_ui_completed
-#' @importFrom learnr question_ui_try_again
-#' @importFrom learnr question_is_valid
+#' @importFrom learnr question_ui_correct
 #' @import learnr
 #' @import ISDStutorials
 #' 
