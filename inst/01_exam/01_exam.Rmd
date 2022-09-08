@@ -51,13 +51,13 @@ question_blank("Name: ___",
           allow_retry = FALSE )
 # have name, grade button, and print button on same line
 bootstrapPage(
-#     div(style="display:inline-block",
-#         grade_button_ui("grade_out") ),
+     div(style="display:inline-block",
+         grade_button_ui("grade_out") ),
      div(style="display:inline-block", print_ui("Print") )
 )
 
 # can have the grade output appear anywhere in your tutorial
-#grade_output_ui("grade_out")
+grade_output_ui("grade_out")
 ```
 
 

@@ -1,46 +1,3 @@
-# Exam container
-#
-# Add an exam format to prevent displaying whether the question was correct
-# or incorrect. This was adapted from the learnr package quiz
-# function. Many thanks to the learnr author who developed a great and adaptable teaching tool.
-#
-#
-# @param ... One or more questions or answers
-# @param caption Optional quiz caption (defaults to "Quiz")
-# @family Interactive Questions
-#
-# @importFrom rlang "%||%"
-#
-# @seealso quiz
-# @export
-# exam <- function(..., caption = rlang::missing_arg()) {
-# 
-#   # create table rows from questions
-#   index <- 1
-#   questions <- lapply(list(...), function(question) {
-#     if (!is.null(question$label)) {
-#       label <- paste(question$label, index, sep="-")
-#       question$label <- label
-#       question$ids$answer <- NS(label)("answer")
-#       question$ids$question <- label
-#       index <<- index + 1
-#     }
-#     question
-#   })
-# 
-#   caption <-
-#     if (rlang::is_missing(caption)) {
-#       learnr:::i18n_span("text.quiz", "Quiz")
-#     } else if (!is.null(caption)) {
-#       learnr:::quiz_text(caption)
-#     }
-# 
-#   ret <- list(caption = caption, questions = questions)
-#   class(ret) <- "exam"
-#   ret
-# }
-
-
 
 #' Knitr question print methods
 #'
@@ -188,6 +145,7 @@ exam_module_server_impl <- function(
           "try_again"
         } else {
           # not correct and can not try again
+          #"incorrect"
           "try_again"
         }
       }
@@ -225,8 +183,8 @@ exam_module_server_impl <- function(
   output$action_button_container <- renderUI({
     learnr:::question_button_label(
       question,
-      "try_again",
-      #button_type(),
+      #"try_again",
+      button_type(),
       answer_is_valid()
     )
   })
