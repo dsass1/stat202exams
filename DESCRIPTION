@@ -1,13 +1,11 @@
 Type: Package
-Package: ISDStutorials
-Title: Tutorial Lessons for Introduction to Statistics and Data Science
+Package: stat202_exams
+Title: Exams for Introduction to Statistics and Data Science
 Version: 0.0.0.9000
 Authors@R: 
     person("Danielle", "Sass", , "danielle.sass@northwestern.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9755-738X"))
-Description: A series of 'learnr' tutorials based on "Introduction to Statistics 
-    and Data Science" by Elizabeth Tipton, Arend M. Kuyper, Danielle Sass, and 
-    Kaitlyn G. Fitzgerald - Adapted from ModernDive by Chester Ismay and Albert Y. Kim.
+Description: Private Exams to be loaded in RStudio Cloud
 License: CC BY 4.0
 Depends:
     R (>= 3.2.0)
@@ -17,10 +15,10 @@ Imports:
     dplyr,
     ellipsis,
     gradethis (>= 0.1.0.9004),
-    gt,
     fontawesome,
     htmltools,
     htmlwidgets,
+    ISDStutorials,
     janitor,
     knitr (>= 1.31),
     learnr (>= 0.10.1.9008),
@@ -38,7 +36,8 @@ VignetteBuilder:
     knitr
 Remotes: 
     rstudio/learnr,
-    rstudio/gradethis
+    rstudio/gradethis,
+    rstudio/ISDStutorials
 Config/Needs/connect: rsconnect
 Config/Needs/coverage: covr
 Config/Needs/website: pkgdown
@@ -47,4 +46,4 @@ Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
-URL: https://nustat.github.io/ISDStutorials/
+URL: https://dsass1.github.io/stat202_exams/
