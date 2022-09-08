@@ -1,5 +1,5 @@
 #override tutorial completion
-#' @importFrom learnr question_is_correct
+#de @importFrom learnr question_is_correct
 #' @import learnr
 #' @import ISDStutorials
 #' 
