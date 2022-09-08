@@ -29,16 +29,16 @@ question_is_correct.matching <- function(question, value, ...) {
 }
 
 #' @export
-question_is_correct.checkbox <- function(question, value, ...) {
+question_is_correct.learnr_checkbox <- function(question, value, ...) {
   learnr::mark_as(FALSE)
 }
 
 #' @export
-question_is_correct.numeric <- function(question, value, ...) {
+question_is_correct.learnr_numeric <- function(question, value, ...) {
   learnr::mark_as(FALSE)
 }
 
 #' @export
-question_is_correct.radio <- function(question, value, ...) {
+question_is_correct.learnr_radio <- function(question, value, ...) {
   learnr::mark_as(FALSE)
 }
