@@ -19,7 +19,9 @@ library(learnr)
 library(tidyverse)
 library(ISDStutorials)
 library(gradethis)
+
 library(stat202exams)
+conflicted::conflict_prefer_all("stat202exams", "learnr")
 
 knitr::opts_chunk$set(echo = FALSE)
 gradethis_setup()
