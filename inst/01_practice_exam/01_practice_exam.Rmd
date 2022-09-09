@@ -1,0 +1,105 @@
+---
+title: "Practice Exam 1"
+tutorial:
+  id: "isds_pexam1"
+  version: 0.1
+  
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    css: ["css/nu-theme.css"]
+runtime: shiny_prerendered
+description: >
+  This proficiency exam covers Preface - Chapter 4.
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(ISDStutorials)
+library(gradethis)
+
+library(stat202exams)
+#conflicted::conflict_prefer_all("stat202exams", "learnr")
+conflicted::conflict_prefer_all("stat202exams", "ISDStutorials")
+
+knitr::opts_chunk$set(echo = FALSE)
+gradethis_setup()
+options(tutorial.event_recorder = ISDStutorials::isds_recorder)
+```
+
+
+
+```{r isds-header}
+# student name
+question_blank("Name: ___",
+                            answer_fn(function(value){
+                              if (length(value) >= 1 ) {
+                                return(mark_as(TRUE))
+                                }
+                              return(mark_as(FALSE) )
+                              }),
+          style = "notes_question",
+          correct = paste0(fontawesome::fa("check") ),
+          incorrect = paste0(fontawesome::fa("xmark") ),
+          allow_retry = FALSE )
+# have name, grade button, and print button on same line
+bootstrapPage(
+     div(style="display:inline-block", print_ui("Print") )
+)
+```
+
+
+## Instructions
+
+You have 50 minutes to complete this exam. The exam covers the material learned from Preface - Chapter 4 and is open note, open book.
+
+Once you are finished:
+
+-   Make sure every question/exercise has been submitted.
+-   Click the 'pdf' button to save the document as a pdf, you must have the exam open in a browser window for this button to work.
+-   Submit the completed pdf to Canvas.
+
+
+## Concept
+
+```{r Q}
+#reading check 2
+quiz(
+  caption = NULL,
+  #Q1
+  question_multidrop(
+  "The following code is in a code chunk: $\\quad 8/2 \\; = 4$",
+  choices = c("What is the output?"),
+  wordbank = c("4", "TRUE", "FALSE", "NA", "Error", "0"),
+  answer(c("Error"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"),
+  question_blank(
+    "In a typical dataframe, columns correspond to ___.",
+    answer(c("variables"), correct = TRUE),
+    allow_retry = TRUE,
+    incorrect = "submitted"
+  ),
+  question_multidrop(
+  "Which of the following shows the relationship between two categorical variables?",
+  choices = c(""),
+  wordbank = c("linegraph", "faceted histogram", "stacked barplot", "boxplot", "none of these"),
+  answer(c("stacked barplot"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  )
+
+)
+
+```
+
+## Application
+
+Construct a scatterplot of `eruptions` by `waiting` using the `faithful` dataset by filling in the blanks (the data is already preloaded in R).
+
+```{r Ex1, exercise=TRUE}
+ggplot(data = faithful, mapping = aes(x = ___, y = ___)) +
+  ____
+```
