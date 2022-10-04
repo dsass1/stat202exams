@@ -1,7 +1,7 @@
 ---
-title: "Exam 1"
+title: "Exam 1 Sec 21"
 tutorial:
-  id: "isds_exam1"
+  id: "isds_exam1b"
   version: 0.1
 
   
@@ -22,15 +22,11 @@ library(ISDStutorials)
 library(gradethis)
 library(skimr)
 
-library(stat202exams)
-#conflicted::conflict_prefer_all("stat202exams", "learnr")
-conflicted::conflict_prefer_all("stat202exams", "ISDStutorials")
-
 knitr::opts_chunk$set(echo = FALSE)
 gradethis_setup()
 options(tutorial.event_recorder = ISDStutorials::isds_recorder)
 
-survey <- read_rds("data/midterm_data.rds")
+survey <- read_rds("data/data_exam1_fa22.rds")
 ```
 
 
@@ -57,7 +53,7 @@ bootstrapPage(
 
 ## Instructions
 
-You have 50 minutes to complete this exam. The exam covers the material learned from Preface - Chapter 4 and is open note, open book.
+You have 50 minutes to complete this exam. The exam covers the material learned from Preface - Chapter 4. You are allowed one page of notes front and back. 
 
 Once you are finished:
 
@@ -74,39 +70,41 @@ quiz(
   caption = NULL,
   #Q1
   question_multidrop(
-  "The following code is in a code chunk: $\\quad 3+4 \\; != 7$",
+  "The following code is in a code chunk: $\\quad 9/3 \\; != 2$",
   choices = c("What is the output?"),
-  wordbank = c("7", "TRUE", "FALSE", "NA", "Error", "0"),
-  answer(c("FALSE"), correct = TRUE),
+  wordbank = c("5", "TRUE", "FALSE", "NA", "Error", "0"),
+  answer(c("TRUE"), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
-  question_blank(
-    "In a typical dataframe, rows correspond to ___.",
-    answer(c("observations"), correct = TRUE),
+  question_multidrop(
+    "In a typical dataframe, columns correspond to ___.",
+    choices = c(""),
+    wordbank = c("cells", "rows", "values", "variables", "observations"),
+    answer(c("variables"), correct = TRUE),
     allow_retry = TRUE,
     incorrect = "submitted"
   ),
   question_multidrop(
   "Which of the following shows the relationship between one numerical variable and one categorical variable?",
   choices = c(""),
-  wordbank = c("barplot", "histogram", "stacked barplot", "side-by-side boxplot", "scatterplot"),
-  answer(c("side-by-side boxplot"), correct = TRUE),
+  wordbank = c("barplot", "faceted histogram", "stacked barplot", "boxplot", "scatterplot"),
+  answer(c("faceted histogram"), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
   question_multidrop(
-  "The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100.",
+  paste("The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100.", htmltools::img(src="images/01_tableB.png", height = 300, width = 500) ),
   box = 4,
-  choices = c("Which type of graphic would be most useful for visualizing the relationship between `Income` and `Score`?",
-              "Which type of graphic would be most useful for visualizing the relationship between `Age` and `Race`?"),
+  choices = c("Which type of graphic would be most useful for visualizing the relationship between `Age` and `Score`?",
+              "Which type of graphic would be most useful for visualizing the relationship between `Income` and `Gender`?"),
   wordbank = c("histogram", "scatterplot", "linegraph", "side-by-side boxplot", "stacked barplots"),
   answer(c("scatterplot", "stacked barplots"), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
   question_multidrop(
-  "The histogram below shows the distribution of a large company's annual employee income. Which of the following statements is TRUE concerning this distribution?",
+  paste("The histogram below shows the distribution of a large classes exam grades out of 100. Which of the following statements is TRUE concerning this distribution?", htmltools::img(src="images/02_grades.png", height = 300, width = 500) ),
   box = 11,
   choices = c(""),
   wordbank = c("The distribution is skewed left and the mean is less than the median.",
@@ -114,17 +112,17 @@ quiz(
               "The distribution is skewed left and the mean is greater than the median.",
               "The distribution is skewed right and the mean is greater than the median.",
               "The distribution is symmetric and the mean is equal to the median."),
-  answer(c("The distribution is skewed right and the mean is greater than the median."), correct = TRUE),
+  answer(c("The distribution is skewed left and the mean is less than the median."), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
   question_multidrop(
   "Consider the histogram from the previous problem.",
   box = 2,
-  choices = c("How would the average Employee Income change if the person with the lowest income got a $5,000 pay cut?",
-              "How would the IQR (Interquartile Range) of Employee Income change if the person with the lowest income got a $5,000 pay cut?"),
+  choices = c("How would the average grade change if the person with the lowest grade scored 5 percent better?",
+              "How would the IQR (Interquartile Range) of average grades change if the person with the lowest grade scored 5 percent better?"),
   wordbank = c("Increase","Decrease", "Stay the same"),
-  answer(c("Decrease", "Stay the same"), correct = TRUE),
+  answer(c("Increase", "Stay the same"), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
@@ -132,9 +130,9 @@ quiz(
   "For each of the statistics indicate which of the four choices is correct.",
   box = 4,
   arrange = "ordered",
-  choices = c("Mean", "Maximum", "Standard Deviation"),
+  choices = c("Minimum", "Median", "Standard Deviation"),
   wordbank = c("a) Measure of Centrality/Center","b) Measure of Variability/Spread", "c) Both A and B", "d) Neither A nor B"),
-  answer(c("a) Measure of Centrality/Center", "d) Neither A nor B", "b) Measure of Variability/Spread"), correct = TRUE),
+  answer(c("d) Neither A nor B", "a) Measure of Centrality/Center",  "b) Measure of Variability/Spread"), correct = TRUE),
   allow_retry = TRUE,
   incorrect = "submitted"
   ),
@@ -167,44 +165,37 @@ quiz(
 
 ```
 
-
-<!-- question_wordbank(paste("Q3) Drag and drop the variables to match the aesthetics they are mapped onto in Figure 2.1", htmltools::img(src="images/Figure_02_1.png", height = 400, width = 700) ), -->
-<!--           choices = c("x"), -->
-<!--           wordbank = c("GDP per Capita"), -->
-<!--           answer(c("GDP per Capita"), correct = TRUE),  -->
-<!--         allow_retry = TRUE, -->
-<!--         incorrect = "submitted") -->
-
 ## Application
 
-The following applications use the `survey` dataset which has been preloaded for you. This contains the responses to the questions you answered on day 1 of class.
-
-```{r}
-skim(survey)
-```
+The following applications use the `survey` dataset which has been preloaded for you. This contains the responses to the questions you answered on day 1 of class. For a detailed description of the variables and data click the Section titled "survey Data". You are welcome to use the Help feature of RStudio Cloud if needed.
 
 ### Application 1
 
-Construct a scatterplot of `salary` by `height_inches`. Set the `color` equal to `gender_ident`.
+Construct a scatterplot of `height_inches` by `num_followers`. Set the `color` equal to `personality`.
 
 ```{r App1, exercise=TRUE}
 
 ```
 
-Describe the relationship and answer whether or not you are surprised by the relationship.
+Describe the relationship AND answer whether or not you are surprised by the relationship.
 
 ```{r App1-desc}
 question_text("", incorrect = "submitted",
               answer("ManuallyGradedEverythingWrong", 
                      correct = TRUE),
               allow_retry = TRUE,
-              rows = 5)
+              rows = 7)
 ```
 
 ### Application 2
 
-Let's determine if happier people or sad people go to more parties.
-Consider only the `fall 2022` quarter. Compute the average `num_party` by `happy`. Print the results in descending order (high to low).
+Let's determine if North campus, South campus, or off campus students (Neither) attend more parties. Don't include First year students because they are new to school and may not know people yet.
+
+In other words,
+
+- exclude student's that have `school_year` of "First year"
+- compute the average (mean) of `num_party` by `campus_housing`.
+- Print the results in ascending order (low to high).
 
 ```{r App2, exercise=TRUE}
 
@@ -213,7 +204,7 @@ Consider only the `fall 2022` quarter. Compute the average `num_party` by `happy
 
 ### Application 3
 
-Construct a histogram of `num_followers` using the `survey` dataset. Choose an appropriate number of bins and change the border color to "red".
+Construct a histogram of `salary` using the `survey` dataset. Choose an appropriate number of bins and change the border color to "white".
 
 ```{r App3, exercise=TRUE}
 ggplot(data = survey, mapping = aes(x = )) +
@@ -233,10 +224,43 @@ question_text("", incorrect = "submitted",
               answer("ManuallyGradedEverythingWrong", 
                      correct = TRUE),
               allow_retry = TRUE,
-              rows = 5)
+              rows = 10)
 ```
 
+## survey Data
+
+
+You are welcome to open the dataset in RStudio Cloud as well if the information provided below is not sufficient for you.
+
+Variables:
+
+- `quarter` -- Identifies in which quarter the student took stat 202 (fall 2022, summer 2022, spring 2022, winter 2022, fall 2021)
+- `num_party` -- "On average (approx.) how many parties a month do you attend?"
+- `personality` -- "Are you more of an introvert or extrovert? (Introvert, Extrovert)"
+- `gender_ident` -- "Which gender do you identify as (Male, Female). "Other" was removed to protect against the possibility of having their responses identified by other students.""
+- `school_year` -- "What year are you in school? (First year, Sophomore, Junior, Senior, Other)"
+- `height_inches` -- "How tall are you? (in inches)"
+- `happy` -- "How happy are you? (Very happy, Pretty happy, Not too happy, Don't know)"
+- `campus_housing` -- "Where do you live on campus? (North campus, South campus, Neither)"
+- `num_followers` -- "How many followers do you have on Instagram (approx.)?""
+- `salary` -- "What do you expect your starting salary to be after graduation, to the nearest thousand dollars? (ex: 47,000)"
+
+```{r}
+glimpse(survey)
+```
+
+```{r}
+skim(survey)
+```
 
 ## Bonus
 
-The first day of class you were introduced to AHA slides. Which of the following were FALSE?
+```{r bonus}
+question_blank(
+  "In our daily class slides, we use the same dataset for all of our examples. What is the name of the dataset?",
+  answer(c("penguins"), correct = TRUE),
+  allow_retry = TRUE,
+  style = "exam",
+  incorrect = "submitted"
+  )
+```

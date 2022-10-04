@@ -14,7 +14,7 @@
 <meta name="allow-skip" content="true" />
 <meta name="learnr-version-prerender" content="0.10.1.9020" />
 
-<title>Exam 1</title>
+<title>Exam 1 Sec 21</title>
 
 <!-- header-includes START -->
 <!-- HEAD_CONTENT -->
@@ -1088,7 +1088,7 @@ survey <- read_rds("data/midterm_data.rds")
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::register_http_handlers(session, metadata = list(id = "isds_exam1", version = 0.1))
+learnr:::register_http_handlers(session, metadata = list(id = "isds_exam1b", version = 0.1))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
@@ -1109,126 +1109,131 @@ session$onSessionEnded(function() {
 
 <script type="application/shiny-prerendered" data-context="server">
 ISDStutorials:::notes_prerendered_chunk(structure(list(type = "blank", label = "isds-header", question = structure("Name: ___", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_110a3f8", 
+"character")), answers = list(structure(list(id = "lnr_ans_d0ab98b", 
     option = "function (value) \n{\n    if (length(value) >= 1) {\n        return(mark_as(TRUE))\n    }\n    return(mark_as(FALSE))\n}", 
     value = "function (value) \n{\n    if (length(value) >= 1) {\n        return(mark_as(TRUE))\n    }\n    return(mark_as(FALSE))\n}", 
     label = NULL, correct = NULL, message = NULL, type = "function"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 448 512\" style=\"height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z\"/><\u002fsvg>", html = TRUE, class = c("html", 
+"tutorial_quiz_answer"))), style = "notes_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 448 512\" style=\"height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z\"/><\u002fsvg>", html = TRUE, class = c("html", 
 "character")), try_again = structure("<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 320 512\" style=\"height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z\"/><\u002fsvg>", html = TRUE, class = c("html", 
 "character")), incorrect = structure("<svg aria-hidden=\"true\" role=\"img\" viewBox=\"0 0 320 512\" style=\"height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;\"><path d=\"M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z\"/><\u002fsvg>", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "isds-header-answer", question = "isds-header"), 
     loading = structure("<strong>Loading:<\u002fstrong> \nName: ___\n<br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 201394593.906218, options = list(placeholder = "Enter answer here...", 
-        trim = TRUE, style = "notes_question")), class = c("blank", 
-"notes_question")), session = session)
+    seed = 1362671713.86546, options = list(placeholder = "Enter answer here...", 
+        trim = TRUE)), class = c("blank", "notes_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-1", question = structure("The following code is in a code chunk: \\(\\quad 3+4 \\; != 7\\)", html = TRUE, class = c("html", 
-"character")), choices = "What is the output?", box = 6, wordbank = c("7", 
+learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-1", question = structure("The following code is in a code chunk: \\(\\quad 3*2 \\; != 5\\)", html = TRUE, class = c("html", 
+"character")), choices = "What is the output?", box = 6, wordbank = c("5", 
 "TRUE", "FALSE", "NA", "Error", "0"), arrange = "random", answers = list(
-    structure(list(id = "lnr_ans_5c43e1", option = "FALSE", value = "FALSE", 
-        label = structure("FALSE", html = TRUE, class = c("html", 
+    structure(list(id = "lnr_ans_8d94e84", option = "TRUE", value = "TRUE", 
+        label = structure("TRUE", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "Q-1-answer", question = "Q-1"), loading = structure("<strong>Loading:<\u002fstrong> \nThe following code is in a code chunk: \\(\\quad 3+4 \\; != 7\\)\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "Q-1-answer", question = "Q-1"), loading = structure("<strong>Loading:<\u002fstrong> \nThe following code is in a code chunk: \\(\\quad 3*2 \\; != 5\\)\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1033339912.01881, options = list()), class = c("multidrop", 
+    seed = 1612187859.74927, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "blank", label = "Q-2", question = structure("In a typical dataframe, rows correspond to ___.", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d0e4679", 
-    option = "observations", value = "observations", label = structure("observations", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "blank", label = "Q-2", question = structure("In a typical dataframe, columns correspond to ___.", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_ce42af0", 
+    option = "variables", value = "variables", label = structure("variables", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "Q-2-answer", question = "Q-2"), loading = structure("<strong>Loading:<\u002fstrong> \nIn a typical dataframe, rows correspond to ___.\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "Q-2-answer", question = "Q-2"), loading = structure("<strong>Loading:<\u002fstrong> \nIn a typical dataframe, columns correspond to ___.\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1943497518.59499, options = list(placeholder = "Enter answer here...", 
-        trim = TRUE, style = "tutorial_question")), class = c("blank", 
-"tutorial_question")), session = session)
+    seed = 1547862519.27922, options = list(placeholder = "Enter answer here...", 
+        trim = TRUE)), class = c("blank", "tutorial_question"
+)), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-3", question = structure("Which of the following shows the relationship between one numerical variable and one categorical variable?", html = TRUE, class = c("html", 
 "character")), choices = "", box = 6, wordbank = c("barplot", 
-"histogram", "stacked barplot", "side-by-side boxplot", "scatterplot"
-), arrange = "random", answers = list(structure(list(id = "lnr_ans_37896eb", 
-    option = "side-by-side boxplot", value = "side-by-side boxplot", 
-    label = structure("side-by-side boxplot", html = TRUE, class = c("html", 
+"faceted histogram", "stacked barplot", "boxplot", "scatterplot"
+), arrange = "random", answers = list(structure(list(id = "lnr_ans_4ac612", 
+    option = "faceted histogram", value = "faceted histogram", 
+    label = structure("faceted histogram", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "Q-3-answer", question = "Q-3"), loading = structure("<strong>Loading:<\u002fstrong> \nWhich of the following shows the relationship between one numerical variable and one categorical variable?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1253106594.41648, options = list()), class = c("multidrop", 
+    seed = 516172987.759638, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
 
 
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-4", question = structure("The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100.", html = TRUE, class = c("html", 
-"character")), choices = c("Which type of graphic would be most useful for visualizing the relationship between `Income` and `Score`?", 
-"Which type of graphic would be most useful for visualizing the relationship between `Age` and `Race`?"
+learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-4", question = structure("The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100. <img src=\"images/01_tableB.png\" height=\"300\" width=\"500\"/>", html = TRUE, class = c("html", 
+"character")), choices = c("Which type of graphic would be most useful for visualizing the relationship between `Age` and `Score`?", 
+"Which type of graphic would be most useful for visualizing the relationship between `Income` and `Gender`?"
 ), box = 4, wordbank = c("histogram", "scatterplot", "linegraph", 
 "side-by-side boxplot", "stacked barplots"), arrange = "random", 
-    answers = list(structure(list(id = "lnr_ans_eabd8fa", option = c("scatterplot", 
+    answers = list(structure(list(id = "lnr_ans_987c345", option = c("scatterplot", 
     "stacked barplots"), value = c("scatterplot", "stacked barplots"
     ), label = structure("scatterplot\nstacked barplots", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+        submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+        "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+        "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
     "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
     "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
     "character")), message = NULL, post_message = NULL), ids = list(
-        answer = "Q-4-answer", question = "Q-4"), loading = structure("<strong>Loading:<\u002fstrong> \nThe table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100.\n<br/><br/><br/>", html = TRUE, class = c("html", 
+        answer = "Q-4-answer", question = "Q-4"), loading = structure("<strong>Loading:<\u002fstrong> \nThe table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score on a scale from 0 to 100. <img src=\"images/01_tableB.png\" height=\"300\" width=\"500\"/>\n<br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 677882693.184336, options = list()), class = c("multidrop", 
+    seed = 39698970.4815137, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-5", question = structure("The histogram below shows the distribution of a large company&#39;s annual employee income. Which of the following statements is TRUE concerning this distribution?", html = TRUE, class = c("html", 
+learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "Q-5", question = structure("The histogram below shows the distribution of a classes exam grades. Which of the following statements is TRUE concerning this distribution? <img src=\"images/02_grades.png\" height=\"300\" width=\"500\"/>", html = TRUE, class = c("html", 
 "character")), choices = "", box = 11, wordbank = c("The distribution is skewed left and the mean is less than the median.", 
 "The distribution is skewed right and the mean is less than the median.", 
 "The distribution is skewed left and the mean is greater than the median.", 
 "The distribution is skewed right and the mean is greater than the median.", 
 "The distribution is symmetric and the mean is equal to the median."
-), arrange = "random", answers = list(structure(list(id = "lnr_ans_e93a274", 
-    option = "The distribution is skewed right and the mean is greater than the median.", 
-    value = "The distribution is skewed right and the mean is greater than the median.", 
-    label = structure("The distribution is skewed right and the mean is greater than the median.", html = TRUE, class = c("html", 
+), arrange = "random", answers = list(structure(list(id = "lnr_ans_9539285", 
+    option = "The distribution is skewed left and the mean is less than the median.", 
+    value = "The distribution is skewed left and the mean is less than the median.", 
+    label = structure("The distribution is skewed left and the mean is less than the median.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
-    answer = "Q-5-answer", question = "Q-5"), loading = structure("<strong>Loading:<\u002fstrong> \nThe histogram below shows the distribution of a large company&#39;s annual employee income. Which of the following statements is TRUE concerning this distribution?\n<br/><br/><br/>", html = TRUE, class = c("html", 
+    answer = "Q-5-answer", question = "Q-5"), loading = structure("<strong>Loading:<\u002fstrong> \nThe histogram below shows the distribution of a classes exam grades. Which of the following statements is TRUE concerning this distribution? <img src=\"images/02_grades.png\" height=\"300\" width=\"500\"/>\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 374314951.325696, options = list()), class = c("multidrop", 
+    seed = 1457269163.82141, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
 
@@ -1238,19 +1243,20 @@ learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "
 "character")), choices = c("How would the average Employee Income change if the person with the lowest income got a $5,000 pay cut?", 
 "How would the IQR (Interquartile Range) of Employee Income change if the person with the lowest income got a $5,000 pay cut?"
 ), box = 2, wordbank = c("Increase", "Decrease", "Stay the same"
-), arrange = "random", answers = list(structure(list(id = "lnr_ans_1e3002e", 
+), arrange = "random", answers = list(structure(list(id = "lnr_ans_aff8b51", 
     option = c("Decrease", "Stay the same"), value = c("Decrease", 
     "Stay the same"), label = structure("Decrease\nStay the same", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "Q-6-answer", question = "Q-6"), loading = structure("<strong>Loading:<\u002fstrong> \nConsider the histogram from the previous problem.\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 757686586.647175, options = list()), class = c("multidrop", 
+    seed = 720252214.664606, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
  
@@ -1259,20 +1265,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "
 "character")), choices = c("Mean", "Maximum", "Standard Deviation"
 ), box = 4, wordbank = c("a) Measure of Centrality/Center", "b) Measure of Variability/Spread", 
 "c) Both A and B", "d) Neither A nor B"), arrange = "ordered", 
-    answers = list(structure(list(id = "lnr_ans_16f68f9", option = c("a) Measure of Centrality/Center", 
+    answers = list(structure(list(id = "lnr_ans_4863328", option = c("a) Measure of Centrality/Center", 
     "d) Neither A nor B", "b) Measure of Variability/Spread"), 
         value = c("a) Measure of Centrality/Center", "d) Neither A nor B", 
         "b) Measure of Variability/Spread"), label = structure("a) Measure of Centrality/Center\nd) Neither A nor B\nb) Measure of Variability/Spread", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+        submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+        "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+        "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
     "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
     "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "Q-7-answer", question = "Q-7"), loading = structure("<strong>Loading:<\u002fstrong> \nFor each of the statistics indicate which of the four choices is correct.\n<br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 195085725.909156, options = list()), class = c("multidrop", 
+    seed = 1764412435.17838, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
 
@@ -1283,19 +1290,20 @@ learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "
 "compute the mean of a variable"), box = 4, wordbank = c("top_n()", 
 "count()", "mutate()", "group_by()", "filter()", "select()", 
 "summarize()", "arrange()"), arrange = "ordered", answers = list(
-    structure(list(id = "lnr_ans_5ef58b", option = c("mutate()", 
+    structure(list(id = "lnr_ans_78ab801", option = c("mutate()", 
     "filter()", "summarize()"), value = c("mutate()", "filter()", 
     "summarize()"), label = structure("mutate()\nfilter()\nsummarize()", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "Q-8-answer", question = "Q-8"), loading = structure("<strong>Loading:<\u002fstrong> \nMatch each task with the appropriate function/verb that will accomplish it.\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1357189956.86801, options = list()), class = c("multidrop", 
+    seed = 1098423900.98851, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
  
@@ -1305,19 +1313,20 @@ learnr:::question_prerendered_chunk(structure(list(type = "multidrop", label = "
 "some data %>% filter() %>% count()", "some data %>% select() %>% group_by() %>% summarize()", 
 "some data %>% select() %>% count()", "some data %>% arrange() %>% group_by() %>% summarize()", 
 "some data %>% arrange() %>% count()"), arrange = "random", answers = list(
-    structure(list(id = "lnr_ans_61a4b7d", option = "some data %>% filter() %>% group_by() %>% summarize()", 
+    structure(list(id = "lnr_ans_c5c9329", option = "some data %>% filter() %>% group_by() %>% summarize()", 
         value = "some data %>% filter() %>% group_by() %>% summarize()", 
         label = structure("some data %&gt;% filter() %&gt;% group_by() %&gt;% summarize()", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
-"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
-"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer"))), style = "tutorial_question", button_labels = list(
+    submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+    "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+    "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
 "character")), try_again = structure("submitted", html = TRUE, class = c("html", 
 "character")), incorrect = structure("submitted", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "Q-9-answer", question = "Q-9"), loading = structure("<strong>Loading:<\u002fstrong> \nSuppose we have a dataset (some data) and we want to remove invalid data entries for one of the numerical variables and then proceed to calculate the median for that variable per level/category for a categorical variable. Which general sequence of functions/verbs would achieve this?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1817124890.15384, options = list()), class = c("multidrop", 
+    seed = 1332991450.87928, options = list()), class = c("multidrop", 
 "tutorial_question")), session = session)
 </script>
 
@@ -1345,10 +1354,10 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
         comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
-        cache.path = "01_exam_cache/html/", cache.vars = NULL, 
+        cache.path = "01_exam_b_cache/html/", cache.vars = NULL, 
         cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
         cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "01_exam_files/figure-html/", 
+        fig.align = "default", fig.path = "01_exam_b_files/figure-html/", 
         dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
         fig.width = 6.5, fig.height = 4, fig.env = "figure", 
         fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
@@ -1367,7 +1376,7 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label = "App1-desc", question = structure("", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_e08e873", 
+"character")), answers = list(structure(list(id = "lnr_ans_ece4e93", 
     option = "ManuallyGradedEverythingWrong", value = "ManuallyGradedEverythingWrong", 
     label = structure("ManuallyGradedEverythingWrong", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -1379,7 +1388,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label =
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "App1-desc-answer", question = "App1-desc"), loading = structure("<strong>Loading:<\u002fstrong> <\u002fp>\n\n<p><br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1021219248.52446, options = list(placeholder = "Enter answer here...", 
+    seed = 2127205320.00944, options = list(placeholder = "Enter answer here...", 
         trim = TRUE, rows = 5)), class = c("learnr_text", "tutorial_question"
 )), session = session)
 </script>
@@ -1408,10 +1417,10 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
         comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
-        cache.path = "01_exam_cache/html/", cache.vars = NULL, 
+        cache.path = "01_exam_b_cache/html/", cache.vars = NULL, 
         cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
         cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "01_exam_files/figure-html/", 
+        fig.align = "default", fig.path = "01_exam_b_files/figure-html/", 
         dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
         fig.width = 6.5, fig.height = 4, fig.env = "figure", 
         fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
@@ -1451,10 +1460,10 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
         results = "markup", tidy = FALSE, tidy.opts = NULL, collapse = FALSE, 
         prompt = FALSE, comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
-        cache.path = "01_exam_cache/html/", cache.vars = NULL, 
+        cache.path = "01_exam_b_cache/html/", cache.vars = NULL, 
         cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
         cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "01_exam_files/figure-html/", 
+        fig.align = "default", fig.path = "01_exam_b_files/figure-html/", 
         dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
         fig.width = 6.5, fig.height = 4, fig.env = "figure", 
         fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
@@ -1494,10 +1503,10 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
         comment = NA, highlight = FALSE, size = "normalsize", 
         background = "#F7F7F7", strip.white = TRUE, cache = 0, 
-        cache.path = "01_exam_cache/html/", cache.vars = NULL, 
+        cache.path = "01_exam_b_cache/html/", cache.vars = NULL, 
         cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
         cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
-        fig.align = "default", fig.path = "01_exam_files/figure-html/", 
+        fig.align = "default", fig.path = "01_exam_b_files/figure-html/", 
         dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
         fig.width = 6.5, fig.height = 4, fig.env = "figure", 
         fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
@@ -1516,7 +1525,7 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label = "App3-describe", 
     question = structure("", html = TRUE, class = c("html", "character"
-    )), answers = list(structure(list(id = "lnr_ans_340c477", 
+    )), answers = list(structure(list(id = "lnr_ans_1884b26", 
         option = "ManuallyGradedEverythingWrong", value = "ManuallyGradedEverythingWrong", 
         label = structure("ManuallyGradedEverythingWrong", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -1529,7 +1538,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label =
         answer = "App3-describe-answer", question = "App3-describe"), 
     loading = structure("<strong>Loading:<\u002fstrong> <\u002fp>\n\n<p><br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 985608954.04104, options = list(placeholder = "Enter answer here...", 
+    seed = 443661313.293404, options = list(placeholder = "Enter answer here...", 
         trim = TRUE, rows = 5)), class = c("learnr_text", "tutorial_question"
 )), session = session)
 </script>
@@ -1555,7 +1564,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label =
 
 <!-- begin doc-metadata -->
 <div id="doc-metadata">
-<h2 class="title toc-ignore" style="display:none;">Exam 1</h2>
+<h2 class="title toc-ignore" style="display:none;">Exam 1 Sec 21</h2>
 </div>
 <!-- end doc-metadata -->
 
