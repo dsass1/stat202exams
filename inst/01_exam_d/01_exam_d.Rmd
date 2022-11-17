@@ -1,0 +1,329 @@
+---
+title: "Exam 1 Sec 21 Re-take"
+tutorial:
+  id: "isds_exam1d"
+  version: 0.1
+  
+output:
+  learnr::tutorial:
+    progressive: false
+    allow_skip: true
+    css: ["css/nu-theme.css"]
+runtime: shiny_prerendered
+description: >
+  This proficiency exam covers Preface - Chapter 4.
+---
+
+```{r setup, include=FALSE}
+# CLICK THE "Run Document" button at the top
+# DO NOT CHANGE ANY OF THE BELOW CODE!
+# THERE ARE NO ANSWERS IN THIS DOCUMENT
+
+library(learnr)
+library(tidyverse)
+library(ISDStutorials)
+library(gradethis)
+library(skimr)
+
+knitr::opts_chunk$set(echo = FALSE)
+gradethis_setup()
+options(tutorial.event_recorder = ISDStutorials::isds_recorder)
+
+survey <- read_rds("data/survey.rds")
+# 
+# tmp <- exam_data %>%
+#   select(quarter, height_inches, num_followers, personality, num_party, party_bin, campus_housing, school_year, salary, gender_ident, happy, marry, smoke_weed, exercise, love_first_sight) %>%
+#   filter(height_inches >6 | is.na(height_inches)) %>%
+#   filter(salary < 1000000 | is.na(salary))
+# 
+# write_rds(tmp, "survey2.rds")
+
+```
+
+
+
+```{r isds-header}
+# student name
+question_blank("Name: ___",
+                            answer_fn(function(value){
+                              if (length(value) >= 1 ) {
+                                return(mark_as(TRUE))
+                                }
+                              return(mark_as(FALSE) )
+                              }),
+          style = "notes_question",
+          correct = paste0(fontawesome::fa("check") ),
+          incorrect = paste0(fontawesome::fa("xmark") ),
+          allow_retry = FALSE )
+# have name, grade button, and print button on same line
+bootstrapPage(
+     div(style="display:inline-block", print_ui("Print") )
+)
+```
+
+
+## Instructions
+
+You have 50 minutes to complete this exam. The exam covers the material learned from Preface - Chapter 4. You are allowed one page of notes front and back.
+
+Once you are finished:
+
+-   Make sure your **name** is entered. If your name is not entered you cannot receive a grade.
+-   Make sure every question/exercise has been submitted/run.
+-   Click the 'pdf' button to save the document as a pdf, you must have the exam open in a browser window for this button to work.
+-   Submit the completed pdf to Canvas.
+
+
+## Concept
+
+If one of your Concept answers does not submit (you click submit and it does not save your answer) enter the number followed by the answer (ie: 1. a ; 2. ...) in this box.
+
+```{r Concept-help}
+question_text("", incorrect = "submitted",
+              answer("ManuallyGradedEverythingWrong", 
+                     correct = TRUE),
+              allow_retry = TRUE,
+              rows = 4)
+```
+
+```{r Q}
+#reading check 2
+quiz(
+  caption = NULL,
+  #Q1
+  question_text(
+  paste("Q1) The following code is in a code chunk:", htmltools::img(src="images/00_math1.png", height = 75, width = 200), "<br> What is the output? <br> <br> 
+  a) 2 <br> 
+  b) TRUE <br> 
+  c) FALSE <br> 
+  d) NA <br> 
+  e) Error <br> 
+  f) 0"),
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+    "Q2) In a typical dataframe, ___ correspond to observations. <br>  <br> 
+    a) columns <br> b) variables <br> c) values <br> d) rows <br> e) cells",
+    answer("wrong", correct = TRUE),
+    allow_retry = TRUE,
+    incorrect = "submitted"
+  ),
+  question_text(
+  "Q3) Which of the following shows the distribution of only one numeric variable? <br>  <br> a) barplot <br> b) histogram <br> c) stacked barplot <br> d) side-by-side boxplot <br> e) scatterplot",
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  paste("Q4a) The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score with ranges between 0 to 100. <br>", htmltools::img(src="images/01_tableC.png", height = 300, width = 500), "<br> Which type of graphic would be most useful for visualizing the relationship between `Income` and `Score`? <br> <br> a) histogram <br> b) scatterplot <br> c) linegraph <br> d) side-by-side boxplot <br> e) stacked barplots"),
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  paste("Q4b) The table provides the first 8 observations from a sample of 200 individuals, who reported their age, race, income, and job satisfaction score with ranges between 0 to 100. <br>", htmltools::img(src="images/01_tableC.png", height = 300, width = 500), "<br> Which type of graphic would be most useful for visualizing the relationship between `Gender` and `Race`? <br> <br> a) histogram <br> b) scatterplot <br> c) linegraph <br> d) side-by-side boxplot <br> e) stacked barplots"),
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  paste("Q5) The histogram below shows the distribution of a large company's annual employee income. Which of the following statements is TRUE concerning this distribution? <br>", htmltools::img(src="images/02_income.png", height = 300, width = 500),  "<br>  <br> a) The distribution is skewed left and the mean is less than the median. <br> b) The distribution is skewed right and the mean is less than the median. <br> c) The distribution is skewed left and the mean is greater than the median. <br> d) The distribution is skewed right and the mean is greater than the median. <br> e) The distribution is symmetric and the mean is equal to the median."),
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q6a) Consider the histogram from the previous problem. <br> How would the average Employee Income change if the person with the lowest income got a $5,000 pay cut (ie: lowest income employee pay decreases by 5,000)?  <br> <br> a) Increase <br> b) Decrease  <br> c) Stay the same",
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q6b) Consider the histogram from the previous problem. <br>How would the IQR (Interquartile Range) of Employee Income change if the person with the lowest income got a $5,000 pay cut? <br> <br> a) Increase <br> b) Decrease  <br> c) Stay the same",
+  answer("wrong", correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q7a) For the statistic, MEAN, indicate which of the four choices is correct. <br><br> a) Measure of Centrality/Center <br> b) Measure of Variability/Spread <br> c) Both A and B <br> d) Neither A nor B",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q7b) For the statistic, MAXIMUM, indicate which of the four choices is correct. <br><br> a) Measure of Centrality/Center <br> b) Measure of Variability/Spread <br> c) Both A and B <br> d) Neither A nor B",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q7c) For the statistic, STANDARD DEVIATION, indicate which of the four choices is correct. <br><br> a) Measure of Centrality/Center <br> b) Measure of Variability/Spread <br> c) Both A and B <br> d) Neither A nor B",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q8a) Which function/verb will... *order the observations based on a variable from small to large* <br> <br>
+  a) top_n() <br> 
+  b) count() <br> 
+  c) mutate()<br> 
+  d) group_by() <br> 
+  e) filter() <br> 
+  f) select() <br> 
+  g) summarize()<br> 
+  h) arrange()",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q8b) Which function/verb will... *keep only desired variables* <br> <br>
+  a) top_n() <br> 
+  b) count() <br> 
+  c) mutate()<br> 
+  d) group_by() <br> 
+  e) filter() <br> 
+  f) select() <br> 
+  g) summarize()<br> 
+  h) arrange()",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q8c) Which function/verb will... *create a new variable* <br> <br>
+  a) top_n() <br> 
+  b) count() <br> 
+  c) mutate()<br> 
+  d) group_by() <br> 
+  e) filter() <br> 
+  f) select() <br> 
+  g) summarize()<br> 
+  h) arrange()",
+  answer(c("wrong"), correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  ),
+  question_text(
+  "Q9) Suppose we have a dataset (some data) and we want to get the total number of observations within each level/category of a categorical variable; and then we want to display the results with the level/category with the largest number of observations in it at the top of the output. Which general sequence of functions/verbs would achieve this? <br> <br> a) some data %>% count() %>% arrange(desc()) <br> b) some data %>% count() %>% arrange() <br> c) some data %>% mutate() %>% arrange(desc()) <br> d) some data %>% mutate() %>% arrange() <br> e) some data %>% summarize() %>% arrange(desc()) <br> f) some data %>% summarize() %>% arrange()",
+  answer("wrong",correct = TRUE),
+  allow_retry = TRUE,
+  incorrect = "submitted"
+  )
+  
+)
+
+```
+
+
+## Application
+
+The following applications use the `survey` dataset which has been preloaded for you. This contains the responses to the questions you answered on day 1 of class. For a detailed description of the variables and data click the Section titled "survey Data". You are welcome to use the Help feature of RStudio Cloud if needed.
+
+### Application 1 (5 points)
+
+For our class (fall 2022), we want to see if there is a relationship between the age a student thinks they will marry and their height.
+
+First, subset the dataset `survey` to only include the `quarter` equal to "fall 2022". Store this in `survey_fall`.
+
+Then use `survey_fall` to construct a scatterplot of `height_inches` by `marry`. Set the `color` equal to `love_first_sight`.
+
+```{r App1, exercise=TRUE}
+survey_fall <-
+  
+ggplot(data = survey_fall)
+
+```
+
+Describe the relationship between `marry` and `height_inches` AND answer does it appear that students who believe in love at first sight will get married younger than those that do not?
+
+```{r App1-desc}
+question_text("", incorrect = "submitted",
+              answer("ManuallyGradedEverythingWrong", 
+                     correct = TRUE),
+              allow_retry = TRUE,
+              rows = 10)
+```
+
+### Application 2 (3 points)
+
+Using the `survey` dataset... 
+
+- compute the `mean` and `sd` of `num_followers`
+- make sure you print/output the results
+
+```{r App2, exercise=TRUE}
+
+```
+
+### Application 3 (3 points)
+
+Using the `survey` dataset...
+
+- subset the dataset to only contain the columns: `quarter` and `height_inches`
+- create a new variable called `height_feet` which is computed as `height_inches`/12
+- make sure you print/output the results
+
+```{r App3, exercise=TRUE}
+
+```
+
+### Application 4 (4 points)
+
+Let's determine if people who `smoke_weed` are happier.
+
+Use the `survey_party` dataset created below. This removes the NA values and and removes the student's who "Don't know" whether or not they are happy.
+
+Now, construct a barplot of `happy` with `fill` equal to `smoke_weed`. 
+
+The counts will distort this interpretation so set the `position` argument that will represent a **proportion** (ie: all bars should be filled to the top at 1).
+
+```{r App4, exercise=TRUE}
+survey_party <- survey %>% 
+  filter(!is.na(smoke_weed), happy != "Don't know")
+
+
+```
+
+Based on the barplot, conclude if this leads you to believe that people who smoke weed are happier.
+
+```{r App4-describe}
+question_text("", incorrect = "submitted",
+              answer("ManuallyGradedEverythingWrong", 
+                     correct = TRUE),
+              allow_retry = TRUE,
+              rows = 10)
+```
+
+## survey Data
+
+You are welcome to open the dataset in RStudio Cloud as well if the information provided below is not sufficient for you.
+
+Variables:
+
+- `quarter` -- Identifies in which quarter the student took stat 202 (fall 2022, summer 2022, spring 2022, winter 2022, fall 2021)
+- `num_party` -- "On average (approx.) how many parties a month do you attend?"
+- `personality` -- "Are you more of an introvert or extrovert? (Introvert, Extrovert)"
+- `gender_ident` -- "Which gender do you identify as (Male, Female). "Other" was removed to protect against the possibility of having their responses identified by other students.""
+- `school_year` -- "What year are you in school? (First year, Sophomore, Junior, Senior, Other)"
+- `height_inches` -- "How tall are you? (in inches)"
+- `happy` -- "How happy are you? (Very happy, Pretty happy, Not too happy, Don't know)"
+- `campus_housing` -- "Where do you live on campus? (North campus, South campus, Neither)"
+- `num_followers` -- "How many followers do you have on Instagram (approx.)?""
+- `salary` -- "What do you expect your starting salary to be after graduation, to the nearest thousand dollars? (ex: 47,000)"
+- `marry` -- "At what age do you think you will marry?" (In the case, missing response indicates that student had no plans for marriage.)
+- `smoke_weed` -- "Do you smoke weed? (Yes, No, Occasionally)" (Missing responses means the question was not asked that quarter)
+- `exercise` -- "Approximately, how many minutes do you spend exercising per week?"
+- `love_first_sight` -- "Do you believe in love at first sight?"
+
+```{r}
+glimpse(survey)
+```
+
+```{r}
+skim(survey)
+```
+
+
