@@ -4,5 +4,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of stat202_exams is to ...
+Install the latest version of stat202exams from GitHub with the remotes package.
+
+# install.packages("remotes")
+remotes::install_github("dsass1/stat202exams", dependencies = TRUE)
 
